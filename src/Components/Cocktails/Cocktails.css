@@ -1,0 +1,63 @@
+.cocktails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+
+.cocktail {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, .3);
+  text-decoration: none;
+  color: black;
+}
+
+.cocktail:visited {
+    text-decoration: none;
+}
+
+.drkTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.ingreds {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: .9rem
+}
+
+.wyn {
+  font-weight: bold;
+}
+
+.build p{
+  text-align: center;
+}
+
+.ingreds * {
+  margin-top: 3%
+}
+
+.instruct {
+  width: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin: 3% auto 3% auto;
+  text-align: left;
+}
+
+
+
+.drink-image {
+  width: 250px;
+  height: 250px;
+}

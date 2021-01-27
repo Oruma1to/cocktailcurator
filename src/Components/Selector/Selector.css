@@ -1,0 +1,87 @@
+.select-top {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80%;
+  max-height: 500px;
+
+}
+
+.select *{
+  text-decoration: none;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.buttons {
+  width: 90%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  /* margin: 0 auto; */
+}
+
+
+.spirit {
+  margin: 10px;
+  background: linear-gradient(90deg, rgba(255,95,109,1) 33%, rgba(255,195,113,1) 71%);
+  border-radius: 20px;
+  padding: 20px 100px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+}
+
+.spirit:hover {
+  transition: all 0.8s;
+  box-shadow: 12px 12px 16px 0 rgba(0,3,3,1);
+  Color: #040303
+}
+
+.spirit a{
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.spirit a:visited {
+  color: black;
+
+}
+
+@media (max-width: 650px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .spirit {
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 402px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .spirit {
+    padding: 10px 30px;
+  }
+}
+
+
