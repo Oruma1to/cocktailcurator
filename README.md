@@ -1,6 +1,6 @@
 # The Cocktail Curator
 <p align="center">
-  <img src="/src/images/giphy.gif" width="80%"/>
+  <img src="http://joshuaaponte.surge.sh/Images/cc.png" width="80%"/>
 </p>
 # PROJECT 2 README <!-- omit in toc -->
 
