@@ -28,20 +28,14 @@
 The point of my app is to take a spirits category and introduce the user to classic cocktails they may enjoy based on spirit of choice. Essentially also giving them a small description to go along with each cocktail. As this is something i've done for a living this is one of my interests and passion projects for sure.
 <br>
 
-### Wireframes
-
-Use the Wireframes section to display desktop, tablet and mobile views.
-Im having issues getting it to display in 3 different sizes on the actual website for some reason. However the app itself will be mobile focused and will include the media queries for all 3 sizes in the project itself. Desktop/Tablet/Phone
-
 ShowPage for cocktails
 https://wireframe.cc/pro/pp/50935099b337869
-
 
 <br>
 
 ### MVP
 
-**The Cocktrail Curator** So what i've decided to do is take my project 1 and totally revamp it with react. Since i had issues applying myself with the first project, i am going all out with this one. The cocktail curator will act as a database that allows you to search for cocktails based on spirit, or simply allow the curator to pick for you.
+**The Cocktrail Curator** So what i've decided to do is take an old project of mine and totally revamp it with react. Since i had issues applying myself with the first project, i am going all out with this one. The cocktail curator will act as a database that allows you to search for cocktails based on spirit, or simply allow the curator to pick for you.
 
 <br>
 
@@ -83,31 +77,33 @@ https://wireframe.cc/pro/pp/50935099b337869
 
 ```
 src
-|__ assets/
-      |__ data-tests
-      |__ images
+|__ App.js
 |__ components/
-      |__ Header.js
-      |__ App.js
-      |__ Cocktails.jsx      
-      |__ Selector.js
-      |__ MoreButtons.jsx
-      |__ Footer.js
+      |__ Cocktails
+          |__Cocktail.js
+          |__Cocktails.jsx
+          |__NewSpirit.jsx
+      |__ LandingPage
+          |__LandingPage.jsx
+      |__ Selector
+          |__Selector.jsx
+      |__ Shared
+          |__Footer.jsx
+          |__Header.jsx
 ```
 
 <br>
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the title as a nav back home._                         |
+|    Header    | functional |   n   |   n   | _The header will contain the title as a nav back home._          |
 |     App      | functional |   y   |   n   | _The App will house the overall structure and the axios call._   |
 |   Selector   | functional |   n   |   y   | _The Selector will be what renders the buttons to choose spirit of choice to start._     |
-|   Cocktails    | functional |   n   |   y   | _The Cocktails component will render the list of cocktails base on spirit preference._|
-|     MoreButtons     | functional |   n   |   y   | _The will render Selector buttons onto the cocktail page and allow for different styling._ |
+|     NewSpirit     | functional |   y   |   y   | _This component will be what updates state for spirit when someone clicks a different spirit_   |
+|   Cocktail    | functional |   n   |   y   | _The Cocktails component will render the all of the details for mixing the certain cocktail on its own page._|
+|     Cocktails     | functional |   n   |   y   | _The Cocktails component will render the list of cocktails base on spirit preference._ |
 |    Footer    | functional |   n   |   n   | _The footer will house my copyright_ |
 
 <br>
@@ -117,13 +113,12 @@ src
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
 | Create Header/footer |    L     |     1 hr      |          |    <1 hr    |
-| App html/axios call |    H     |     3 hrs      |          |     2hrs     |
+| App html/axios call |    H     |     3 hrs      |          |     1hrs     |
 | Make Cocktails layout |    H     |     9 hrs      |          |     9hrs     |
-|   MoreButtons   |    H     |     7 hrs      |          |     1hr     |
-| Get Selector to work |    H     |     7 hrs      |          |     3hrs     |
-| Universal Styling   |    H     |     8 hrs      |          |    10hrs     |
-| Storybook int |    L     |     1 hr      |          |    2 hr    |
-| TOTAL               |          |    35 hrs      |          |     28hrs     |
+|   NewSpririt   |    H     |     7 hrs      |          |     1hr     |
+| Get Selector to work |    H     |     7 hrs      |          |     1hrs     |
+| Universal Styling   |    H     |     8 hrs      |          |    4hrs     |
+| TOTAL               |          |    35 hrs      |          |     15hrs     |
 
 <br>
 
@@ -149,25 +144,9 @@ src
 ** Add cocktails to favorite, stored to local.
 ** Add styled age checker
 ** Flowing page transitions
-** Find a better universal styling for drink lists
 <br>
 
 ***
 
-## Project Delivery
-
-### Code Showcase
-
-
-
-### Code Issues & Resolutions
-
-            <Switch>
-              <Route exact path="/Selector">
-                <Selector apiCall={apiCall} updateSpirit={updateSpirit} />
-              </Route>
-            </Switch>
-
-            The switch statement was vital in getting multpile components to render and transition, withou them i kept hitting the transition wall as nothing would actually load. At first i had multiple Routes in one switch statement but eventually the components wouldn't render any more, so in the end, to be safe i wrapped every Route in switch statements.
 
 
