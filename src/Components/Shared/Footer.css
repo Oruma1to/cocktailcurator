@@ -1,23 +1,18 @@
 .foot {
-  height: 10vh;
+  height: 100px;
   background-color: black;
-  text-align: center;
-  color: #C95d63;
+  color: teal;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   font-weight: bold;
-}
+};
 
-.foot p {
-  background: -webkit-linear-gradient(90deg,#ff5f6d 33%, #ffc371 71%);
-  background-clip:inherit;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@media (max-width: 402px) {
-    .foot p {
-      font-size: 14px
-    }
+.foot > h1 {
+  color: teal;  
+  letter-spacing: 5px;
+  font-weight: bold;
 }

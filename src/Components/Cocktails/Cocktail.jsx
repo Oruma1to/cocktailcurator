@@ -1,28 +1,38 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
 import './Cocktail.css'
 
-export default function Cocktail(props) {
-  console.log(props.drinks)
+const Cocktail = ({ drink }) => {
+  const ingredients = [];
+  const measures = [];
+  let listItems = [];
+
+  for(let key in drink) {
+    if(key.includes('strIngredient') && drink[key] !== null) ingredients.push(drink[key]);
+    if(key.includes('strMeasure') && drink[key] !== null) measures.push(drink[key])
+  }
+
+  for(let i = 0; i < ingredients.length; i++) {
+    listItems.push((measures[i] ? measures[i] : '') + " " + ingredients[i]);
+  }
+
+  //TODO
+  // from here we just need to create solo pages for each cocktail for indepth instructions
+
+  console.log(listItems)
   return (
-    <div className="cocktail-top">
-      <div className="cocktail-solo">
-        <img src={props.drinks[0].strDrinkThumb} className="drink-image-solo" alt="cocktail" />
-        <div className="ingreds-solo">
-          <p className="drkTitle-solo">{props.drinks[0].strDrink}</p>
-          <p className="wyn-solo">What you'll need</p>
-          <div className="build-solo">
-            <li>{props.drinks[0].strGlass}</li>
-            <li>{props.drinks[0].strMeasure1}{props.drinks[0].strIngredient1}</li>
-            <li>{props.drinks[0].strMeasure2}{props.drinks[0].strIngredient2}</li>
-            <li>{props.drinks[0].strMeasure3}{props.drinks[0].strIngredient3}</li>
-            <li>{props.drinks[0].strMeasure4}{props.drinks[0].strIngredient4}</li>
-            <p className="instruct-solo">{props.drinks[0].strInstructions}</p>
+    <div className="cocktail-container">
+      <div className="cocktail-card">
+        <img src={drink.strDrinkThumb} className="cocktail-image" alt="cocktail" />
+        <div className="cocktail-ingredients">
+          <p className="cocktail-title">{drink.strDrink}</p>
+          <p className="cocktail-wyn">What you'll need</p>
+          <div className="cocktail-build">
+          {listItems.map(item => <li>{item}</li>)}
+            <p className="cocktail-instructions">{drink.strInstructions}</p>
           </div>
         </div>
       </div>
-      <Link to="/Selector/Cocktails/vodka" className="spirit-reset"><p
-        onClick={() => props.updateSpirit('vodka')} >Return to selector</p></Link>
     </div>
   )
 }
+
+export default Cocktail;

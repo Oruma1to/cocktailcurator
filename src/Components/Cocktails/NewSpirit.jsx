@@ -1,33 +1,32 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 import "./NewSpirit.css"
+// import useFetch from '../../App/useFetch'
 
-export default function NewSpirit(props) {
-
-  let choice = props.drinks
-
-
-  if (choice === 1) {
-    choice = "random"
-  } else {
-    choice = props.spirit
-  }
-
-
+const NewSpirit = ({ drinks, spirit, updateSpirit/*, setChoice */ }) => {
+//TODO
+//? FIX SPIRIT TO RENDER IN SENTENCE PROPERLY WHEN A SPIRIT IS SELECTED
+//? KEEP SELECTION HIGHLIGHTED WHILE CURRENT
+  // const {refetch} = useFetch('random')
   return (
     <>
-      <div className="select-new">
-        <div className="buttons-new">
-          <Link to="/Selector/Cocktails/vodka"><p onClick={() => props.updateSpirit('vodka')} className="spirit-new">Vodka</p></Link>
-          <Link to="/Selector/Cocktails/gin"><p onClick={() => props.updateSpirit('gin')} className="spirit-new">Gin</p></Link>
-          <Link to="/Selector/Cocktails/Bourbon"><p onClick={() => props.updateSpirit('Bourbon')} className="spirit-new">Bourbon</p></Link>
-          <Link to="/Selector/Cocktails/rum"><p onClick={() => props.updateSpirit('rum')} className="spirit-new">Rum</p></Link>
-          <Link to="/Selector/Cocktails/tequila"><p onClick={() => props.updateSpirit('tequila')} className="spirit-new">Tequila</p></Link>
-          <Link to="/Selector/Cocktails/Scotch"><p onClick={() => props.updateSpirit('Scotch')} className="spirit-new">Scotch</p></Link>
-          <Link to="/Selector/Cocktails/Random"><p onClick={() => props.apiCall('Random')} className="spirit-new random">Random Cocktail!</p></Link>
+      <div className="new-spirit-container">
+        <div className="new-spirit-buttons">
+          <p onClick={() => updateSpirit('vodka')} className="new-spirit-selector">Vodka</p>
+          <p onClick={() => updateSpirit('gin')} className="new-spirit-selector">Gin</p>
+          <p onClick={() => updateSpirit('Bourbon')} className="new-spirit-selector">Bourbon</p>
+          <p onClick={() => updateSpirit('rum')} className="new-spirit-selector">Rum</p>
+          <p onClick={() => updateSpirit('tequila')} className="new-spirit-selector">Tequila</p>
+          <p onClick={() => updateSpirit('Scotch')} className="new-spirit-selector">Scotch</p>
+          {/* <p onClick={() => {
+            updateSpirit('random')
+            setChoice('random')
+            refetch('random')
+        }} className="spirit-new">Random</p> */}
         </div>
-        {choice === "random" ? <p className="current">The RNG gods have blessed you with...</p>:<p className="current">Currently viewing the {choice} collection</p>}
+        <h3 className="current">Currently viewing the {spirit} collection</h3>
       </div>
     </>
   )
 }
+
+
+export default NewSpirit;

@@ -1,52 +1,61 @@
-
-
-.solo {
-  min-height: 80vh;
+.cocktail-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  margin-top: 5rem;
 }
 
-.cocktail-solo {
+.cocktail-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: .2px black solid;
 }
 
-.drink-image-solo {
-  height: 400px;
-  width: 400px;
+.cocktail-image {
+  height: 40rem;
+  width: 40rem;
+  object-fit: cover;
 }
 
-.ingreds-solo {
-  width: 400px;
+.cocktail-ingredients {
+  width: 40rem;
+  height: 40rem;
   text-align: center;
-  display:flex;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: black;
+  color: white;
 }
 
-.ingreds-solo *{
+.cocktail-ingredients * {
   margin: 6px 20px;
 }
 
-.drkTitle-solo {
+.cocktail-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: teal;
+}
+
+.cocktail-wyn {
   font-size: 2rem;
 }
 
-.wyn-solo {
-  font-size: 1.5rem;
-  text-decoration: underline;
-}
-
-.build-solo {
-  font-size: 1.3rem;
+.cocktail-build {
+  margin-top: 1rem;
+  font-size: 1.8rem;
   text-align: left;
 }
 
-.instruct-solo {
-  font-size: 1rem;
+.cocktail-instructions {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  white-space: nowrap;
 }
 
 .spirit-reset {
@@ -56,35 +65,39 @@
   text-align: center;
 }
 
-.spirit-reset:visited {
+/* .spirit-reset:visited {
   color: orange;
 }
 
 .spirit-reset p {
   margin-top: 50px
-}
+} */
 
 @media (max-width: 900px) {
-    .cocktail-solo {
-      flex-direction: column;
-    }
+  .cocktail-card {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 500px) {
-  .drink-image-solo {
+  .cocktail-image {
     height: 250px;
     width: 250px;
   }
-  .drkTitle-solo {
+
+  .cocktail-title {
     font-size: 1.5rem;
   }
-  .wyn-solo {
+
+  .cocktail-wyn {
     font-size: 1rem;
   }
-  .build-solo{
-    font-size: .8rem 
+
+  .cocktail-build {
+    font-size: .8rem
   }
-  .instruct-solo {
+
+  .cocktail-instructions {
     font-size: .7rem
   }
 }

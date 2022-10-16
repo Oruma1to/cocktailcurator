@@ -1,27 +1,14 @@
 .head {
   background-color: black;
-  height: 10vh;
+  height: 100px;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.head a {
-  text-decoration: none;
-  background: -webkit-linear-gradient(#ff5f6d, #ffc371);
-  background-clip:inherit;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2rem;
+.head > h1 {
+  color: teal;  
+  letter-spacing: 5px;
   font-weight: bold;
-}
-
-.head a:visited {
-  color:teal
-}
-
-@media (max-width: 402px) {
-  .head a {
-    font-size: 26px;
-  }
 }

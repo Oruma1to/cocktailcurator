@@ -1,10 +1,11 @@
-import React from 'react'
 import './Footer.css'
 
-export default function Footer() {
+const Footer = () => {
   return (
     <div className="foot">
-      <p>Copyright 2020 by Joshua Aponte</p>
+      <h1>SIMPLE PROJECT BY YOURS TRULY: JOSHUA APONTE</h1>
     </div>
   )
 }
+
+export default Footer;

@@ -2,11 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 70vh;
+  margin-bottom: 100px;
 }
 
 
-.cocktail {
+/* .cocktail {
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -53,11 +53,4 @@
   -webkit-box-orient: vertical;
   margin: 3% auto 3% auto;
   text-align: left;
-}
-
-
-
-.drink-image {
-  width: 250px;
-  height: 250px;
-}
+} */
